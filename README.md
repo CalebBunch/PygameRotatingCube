@@ -4,6 +4,7 @@ Visualization of 3D rotation using python, pygame, and numpy.
 requirements:
 
 1. pygame
+2. numpy
 
 sources used:
 
