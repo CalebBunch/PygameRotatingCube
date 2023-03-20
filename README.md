@@ -1,5 +1,6 @@
 # 3DCube
 Visualization of 3D rotation using python, pygame, and numpy.
+This project utilizes 3-d Rotation Matrices to compute the new values for the current x, y, z coordinates of the Cube, based on an arbitrary angle, theta. With each iteration of the main program loop, theta is slowly incremented, the new coordinates for each point on the cube are calculated and added to a temporary array, and finally draw onto the screen. This project used the mathematical concept of rotation on a coordinate plane and showed the applicability of mathematical ideas in programming projects. 
 
 requirements:
 
