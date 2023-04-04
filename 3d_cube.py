@@ -121,7 +121,7 @@ def main():
 
             arr = (np.asarray(r)).flatten()
 
-            x, y, z = arr
+            x, y, _ = arr
 
             temp_points.append((x + 500, y + 500))
 
