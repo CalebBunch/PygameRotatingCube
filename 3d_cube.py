@@ -3,13 +3,9 @@ import sys
 import math
 import numpy as np
 
-
 pygame.init()
-
 display = pygame.display
-
 surface = display.set_mode((1000, 1000))
-
 display.set_caption("3D Cube")
 
 WHITE = (255, 255, 255)
@@ -25,35 +21,21 @@ points = (
     (-100, -100, 100),
 )
 
-
 rotation_points = np.array([[0], [0], [0]])
-
 
 def rotate_lines(arr):
     pygame.draw.line(surface, WHITE, arr[0], arr[1], 1)
-
     pygame.draw.line(surface, WHITE, arr[0], arr[2], 1)
-
     pygame.draw.line(surface, WHITE, arr[0], arr[3], 1)
-
     pygame.draw.line(surface, WHITE, arr[1], arr[4], 1)
-
     pygame.draw.line(surface, WHITE, arr[1], arr[7], 1)
-
     pygame.draw.line(surface, WHITE, arr[2], arr[5], 1)
-
     pygame.draw.line(surface, WHITE, arr[2], arr[7], 1)
-
     pygame.draw.line(surface, WHITE, arr[3], arr[4], 1)
-
     pygame.draw.line(surface, WHITE, arr[4], arr[6], 1)
-
     pygame.draw.line(surface, WHITE, arr[5], arr[3], 1)
-
     pygame.draw.line(surface, WHITE, arr[5], arr[6], 1)
-
     pygame.draw.line(surface, WHITE, arr[6], arr[7], 1)
-
     pygame.display.update()
 
 
@@ -134,7 +116,6 @@ def main():
         display.flip()
 
     pygame.quit()
-
     sys.exit()
 
 
