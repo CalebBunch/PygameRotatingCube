@@ -71,18 +71,12 @@ def Rz(theta):
 
 def main():
     run = True
-
     theta = math.pi
-
     clock = pygame.time.Clock()
-
     while run:
         clock.tick(60)
-
         keys = pygame.key.get_pressed()
-
         for event in pygame.event.get():
-
             if event.type == pygame.QUIT:
                 run = False
 
@@ -90,34 +84,23 @@ def main():
             run = False
 
         surface.fill((0, 0, 0))
-
         temp_points = []
-
         rotation = Rz(theta) * Ry(theta) * Rx(theta)
 
         for i in points:
-
             rotation_points = np.array([i])
-
             r = np.dot(rotation_points, rotation, out=None)
-
             arr = (np.asarray(r)).flatten()
-
             x, y, _ = arr
-
             temp_points.append((x + 500, y + 500))
 
         rotate_lines(temp_points)
-
         temp_points = []
-
         theta += 0.01
-
         display.flip()
 
     pygame.quit()
     sys.exit()
-
 
 if __name__ == "__main__":
     main()
